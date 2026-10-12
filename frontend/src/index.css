@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --rec-purple: #5C068C;
+  --rec-purple-dark: #3E0260;
+  --rec-purple-light: #7E1DA8;
+  --rec-gold: #FFB800;
+  --rec-gold-hover: #E0A200;
+  --rec-gold-light: #FFF7D6;
+  --rec-text: #1F2937;
+  --rec-bg-overlay: rgba(15, 7, 26, 0.75);
+  --rec-card-bg: rgba(255, 255, 255, 0.94);
+  --rec-glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(var(--rec-bg-overlay), var(--rec-bg-overlay)), url('/campus.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #1f2937;
+}
+
+/* Custom REC Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 7, 26, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rec-purple-light);
+  border-radius: 4px;
+}
+
+/* Navbar Custom Styling */
+.navbar-rec {
+  background: linear-gradient(135deg, #4A0E63 0%, #29043D 100%) !important;
+  border-bottom: 3px solid var(--rec-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  padding: 0.6rem 0;
+}
+
+.rec-brand-logo {
+  height: 48px;
+  width: auto;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.rec-header-tagline {
+  font-size: 0.72rem;
+  color: var(--rec-gold);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: rgba(255, 184, 0, 0.15);
+  color: var(--rec-gold) !important;
+}
+
+/* Main Container & Cards */
+.rec-main-container {
+  min-height: calc(100vh - 80px);
+}
+
+.card, .rec-card {
+  background: var(--rec-card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--rec-glass-border);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-header {
+  background: rgba(92, 6, 140, 0.05);
+  border-bottom: 1px solid rgba(92, 6, 140, 0.1);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary, .btn-rec-primary {
+  background: linear-gradient(135deg, var(--rec-purple) 0%, var(--rec-purple-dark) 100%) !important;
+  border: 1px solid var(--rec-purple-dark) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(92, 6, 140, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-rec-primary:hover {
+  background: linear-gradient(135deg, var(--rec-purple-light) 0%, var(--rec-purple) 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(92, 6, 140, 0.4);
+}
+
+.btn-gold, .btn-rec-gold {
+  background: linear-gradient(135deg, var(--rec-gold) 0%, var(--rec-gold-hover) 100%) !important;
+  border: 1px solid var(--rec-gold-hover) !important;
+  color: #2D0245 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 184, 0, 0.3);
+}
+
+.btn-gold:hover, .btn-rec-gold:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-outline-rec {
+  border: 2px solid var(--rec-purple) !important;
+  color: var(--rec-purple) !important;
+  font-weight: 600;
+  background: transparent;
+}
+
+.btn-outline-rec:hover {
+  background: var(--rec-purple) !important;
+  color: #ffffff !important;
+}
+
+/* Typography & Headings */
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--rec-purple);
+}
+
+.text-rec-purple {
+  color: var(--rec-purple) !important;
+}
+
+.text-rec-gold {
+  color: var(--rec-gold) !important;
+}
+
+.stat-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--rec-purple-dark);
+}
+
+/* Auth Pages (Login & Register) */
+.auth-box {
+  max-width: 480px;
+  margin: 4vh auto;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-top: 5px solid var(--rec-gold);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rec-login-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.rec-login-header {
+  background: linear-gradient(135deg, rgba(92, 6, 140, 0.08) 0%, rgba(255, 184, 0, 0.08) 100%);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Table Styling */
+.table {
+  --bs-table-bg: transparent;
+}
+.table th {
+  background: rgba(92, 6, 140, 0.08) !important;
+  color: var(--rec-purple-dark);
+  font-weight: 700;
+}
+
+/* Badges */
+.badge-rec-purple {
+  background-color: var(--rec-purple);
+  color: #ffffff;
+}
+.badge-rec-gold {
+  background-color: var(--rec-gold);
+  color: #2D0245;
+  font-weight: 700;
+}
+
+/* Pre-wrap */
+.pre-wrap {
+  white-space: pre-wrap;
+}

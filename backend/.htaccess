@@ -1,0 +1,2 @@
+# Keep the API folder from listing files
+Options -Indexes

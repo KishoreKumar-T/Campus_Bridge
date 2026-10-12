@@ -1,0 +1,4 @@
+# Only PDFs live here; never execute scripts
+<FilesMatch "\.(php|phtml|php5)$">
+  Require all denied
+</FilesMatch>
